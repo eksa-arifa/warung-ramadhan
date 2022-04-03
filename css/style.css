@@ -1,0 +1,375 @@
+@import url('https://fonts.googleapis.com/css2?family=Source+Sans+Pro&display=swap');
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: 'Source Sans Pro', sans-serif;
+}
+
+:root{
+  --primary-color: #a3e635;
+  --seccond-color: #65a30d;
+  scroll-behavior: smooth;
+}
+
+.navbar{
+  width: 100%;
+  background: transparent;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 999;
+}
+.navbar.fixed{
+  background: white;
+  position: fixed;
+  box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+.navbar .large{
+  width: 650px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px;
+  margin: 0 auto;
+}
+.navbar .large .logo{
+  font-weight: 600;
+  color: var(--primary-color);
+  font-size: 25px;
+}
+.navbar .large ul{
+  display: flex;
+}
+.navbar .large ul li{
+  list-style: none;
+  margin: 0 10px;
+}
+.navbar .large ul li a{
+  color: black;
+  text-decoration: none;
+}
+.navbar .large ul li:hover a{
+  color: var(--primary-color);
+}
+.navbar .large .bars{
+  display: none;
+}
+
+.hero{
+  width: 100%;
+  padding: 80px 0;
+}
+.hero .main,
+.about .main,
+.menu .main{
+  width: 650px;
+  padding: 15px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+  align-items: center;
+}
+.hero .main .left,
+.about .main .left{
+  width: 50%;
+  padding: 10px 0;
+}
+.hero .main .first{
+  color: var(--primary-color);
+  font-weight: 600;
+}
+.hero .main .seccond{
+  font-size: 25px;
+  font-weight: bold;
+  display: block;
+  margin: 10px 0;
+  color: var(--seccond-color);
+}
+.hero .main .last{
+  font-weight: 550;
+  color: grey;
+}
+.hero .main .left a{
+  width: 60px;
+  height: 40px;
+  font-size: 15px;
+  font-weight: 600;
+  color: white;
+  border-radius: 5px;
+  background: var(--primary-color);
+  text-decoration: none;
+  display: block;
+  margin-top: 15px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.hero .main .right,
+.about .main .right{
+  width: 50%;
+  padding: 10px 0;
+}
+.hero .main .right img{
+  width: 100%;
+  height: 100%;
+}
+.about{
+  width: 100%;
+  padding: 50px 0;
+  background: #cbd5e1;
+}
+.about .main .left{
+  padding: 15px;
+}
+.about .main .left .tentang{
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--seccond-color);
+  margin-bottom: 15px;
+}
+.about .main .left .text{
+  color: grey;
+}
+.about .main .right{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.about .main .right img{
+  width: 80%;
+  height: 80%;
+  border-radius: 10px;
+  object-fit: cover;
+}
+.menu{
+  width: 100%;
+  padding: 50px 0;
+}
+.menu .nama-section{
+  width: 100%;
+  text-align: center;
+  padding: 15px 0;
+  font-size: 30px;
+  font-weight: 600;
+  color: var(--primary-color);
+}
+.menu .main .card{
+  width: 40%;
+  height: 150px;
+  border-radius: 10px;
+  padding: 10px;
+  margin: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.menu .main .card .nama{
+  font-size: 25px;
+  font-weight: 600;
+  color: var(--primary-color);
+  position: absolute;
+  left: 100%;
+  background: black;
+  transition: 0.5s ease-in-out;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.menu .main .card .harga{
+  color: var(--seccond-color);
+  position: absolute;
+  top: 60px;
+  opacity: 0;
+  transition: 0.5s;
+  transition-delay: 0.5s;
+  background: black;
+  padding: 5px;
+  border-radius: 5px;
+  pointer-events: none;
+}
+.menu .main .card:hover .nama{
+  left: 10px;
+}
+.menu .main .card:hover .harga{
+  opacity: 1;
+}
+
+.gorengan{
+  background: url('https://akcdn.detik.net.id/community/media/visual/2021/09/07/gorengan-1.jpeg?w=600&q=90') center;
+}
+.soto{
+  background: url('https://cdn1.katadata.co.id/media/images/thumb/2021/11/11/Soto_Ayam-2021_11_11-16_34_42_5f526ac236adec3bcaa4bae05a665afa_620x413_thumb.jpg') center;
+}
+.tahu-guling{
+  background: url('https://kolomnews.com/wp-content/uploads/2021/05/TAHU-GULING.jpg') center;
+}
+.aneka-es{
+  background: url('https://blog.klikmro.com/wp-content/uploads/2018/02/tubeice.jpeg') center;
+}
+.aneka-lauk{
+  background: url('https://i0.wp.com/resepkoki.id/wp-content/uploads/2017/09/Warteg.jpeg?fit=500%2C281&ssl=1') center;
+}
+.tempura{
+  background: url('https://i.gojekapi.com/darkroom/gofood-indonesia/v2/images/uploads/bf79171f-87a1-48a6-ad29-e477add76d8c_Go-Biz_20211001_003737.jpeg?h=424&w=720&fit=crop&auto=compress') center;
+}
+.sempol{
+  background: url('https://www.dapurawit.com/wp-content/uploads/2020/11/Cara-Membuat-Sempol-Ayam-Kriuk.jpg') center;
+}
+.sosis-bakar{
+  background: url('https://cdn-brilio-net.akamaized.net/news/2020/04/21/182877/1212741-1000xauto-resep-sosis-bakar.jpg') center;
+}
+
+footer{
+  width: 100%;
+  padding: 50px 15px;
+  background: #4b5563;
+}
+footer .penutupan{
+  display: flex;
+  flex-wrap: wrap;
+}
+footer .category,
+footer .navigation{
+  padding: 15px;
+}
+footer .category .title,
+footer .navigation .title{
+  font-size: 25px;
+  font-weight: bold;
+  color: #334155;
+}
+footer .category ul,
+footer .navigation ul{
+  padding: 0 20px;
+}
+footer .category ul li,
+footer .navigation ul li{
+  color: grey;
+}
+footer .navigation ul li a{
+  color: grey;
+  text-decoration: none;
+}
+
+footer .footer{
+  width: 100%;
+  padding-top: 15px;
+  text-align: center;
+  border-top: 2px solid grey;
+  color: grey;
+  font-weight: 600;
+}
+
+.atas{
+  position: fixed;
+  bottom: 25px;
+  right: 25px;
+  width: 40px;
+  height: 40px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: var(--primary-color);
+  border-radius: 50%;
+  font-size: 25px;
+  text-decoration: none;
+  font-weight: bold;
+  color: white;
+  animation: mantul 0.5s linear infinite;
+  display: none;
+}
+.atas.active{
+  display: flex;
+}
+
+@keyframes mantul{
+  0%{
+    bottom: 25px;
+  }
+  25%{
+    bottom: 35px;
+  }
+  50%{
+    bottom: 45px;
+  }
+  75%{
+    bottom: 35px;
+  }
+  100%{
+    bottom: 25px;
+  }
+}
+
+@media (max-width: 650px){
+  .hero .main,
+  .hero .main .left,
+  .hero .main .right,
+  .about .main,
+  .about .main .left,
+  .about .main .right,
+  .menu .main,
+  .menu .main .card{
+    width: 100%;
+  }
+  footer .penutupan{
+    flex-direction: column;
+  }
+  .navbar .large{
+    width: 100%;
+  }
+  .navbar .large ul{
+    position: absolute;
+    top: 100%;
+    left: 60%;
+    flex-direction: column;
+    background: white;
+    border-radius: 10px;
+    padding: 10px;
+    box-shadow: 0 0 10px rgba(0,0,0,0.5);
+    display: none;
+  }
+  .navbar.active .large ul{
+    display: flex;
+  }
+  .navbar .large ul li{
+    width: 100%;
+    margin: 10px;
+  }
+  .navbar .large .bars{
+    display: block;
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  .navbar .large .bars::after{
+    content: '';
+    position: absolute;
+    transform: translateY(-8px);
+    width: 100%;
+    height: 5px;
+    background: black;
+    transition: 0.5s;
+  }
+  .navbar .large .bars::before{
+    content: '';
+    position: absolute;
+    transform: translateY(8px);
+    width: 100%;
+    height: 5px;
+    background: black;
+    box-shadow: 0 -8px 0 rgba(0,0,0,1);
+    transition: 0.5s;
+  }
+  .navbar.active .large .bars::after{
+    transform: rotate(45deg) translateY(0);
+  }
+  .navbar.active .large .bars::before{
+    transform: rotate(-45deg) translateY(0);
+    box-shadow: 0 0 0 0;
+  }
+}
