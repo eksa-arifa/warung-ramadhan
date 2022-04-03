@@ -261,6 +261,13 @@ footer .footer{
   font-weight: 600;
 }
 
+footer .penutupan .email{
+  width: 100%;
+  padding: 10px 0;
+  text-align: center;
+  color: grey;
+}
+
 .atas{
   position: fixed;
   bottom: 25px;
